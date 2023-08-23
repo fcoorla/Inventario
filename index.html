@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- V2.8  -->
+<html lang="es-ES">
+  <head>
+    <link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="utf-8">
+    <title>Control de Inventario</title>
+
+  <style>
+
+  </style>
+  </head>
+
+  <body>
+   
+    <div class="caja" style="top: 15px;width:100%;">
+      <div id="importar" class="div_boton" style="float:left;margin:0;">
+        <p><image src="xls.svg" height="50px"></image></p>
+        <p><label  class="txt_boton">Cargar</p>
+      </div>
+      <a tabindex="-1" href="listar.html">
+        <div style="float:right" class="div_boton">
+           <p><image src="listar.svg" height="50px"></image></p>
+           <p><label class="txt_boton">Listados</label></p>         
+        </div>
+      </a>
+      <div id="abrir" class="div_boton" style="float:right;margin:0;">
+        <p><image src="download.svg" height="50px"></image></p>
+        <p><label  class="txt_boton">Recuperar</p>
+      </div>
+
+    </div>
+    <p>&nbsp;</p><!--Parrafo en Blanco-->
+    
+    <form id="inputfile" style="display:none">
+       <input id="upload" type=file class="titulo" tabindex="-1" style="display:none">
+    </form>
+    <p> 
+      <!--input type="submit" id="fichero" class="boton" style="background-color: black; border: none; color:green" value="Cargar Fichero.xls"  tabindex="-1"-->
+      <label id="fichero" class="titulo" style="color:green">Cargar Fichero.xls</label>
+    </p>
+    <p>&nbsp;</p><!--Parrafo en Blanco-->
+    <p>
+      <label class="titulo">P/N:</label>
+      <input type="number" class="texto" id="pn">
+      <input type="submit" id="buscar" class="boton" value="Buscar" tabindex="-1">
+    </p>
+    <p>&nbsp;</p><!--Parrafo en Blanco-->
+    <p><label id="descripcion" class="titulo" style="color:green"></label></p>
+    <p> 
+      <label id="Cantidad" class="titulo"></label>
+      &nbsp;&nbsp;&nbsp;&nbsp;
+      <label id="asignados" class="titulo"></label>
+    </p>
+    
+    <p><label id="retornable" class="titulo" style="color:tomato; FONT-SIZE:10px;"></label></p>
+
+    <div class="caja" id="contados" style="display:none; justify-content: center; padding: 2px;">
+      <label class="titulo2"  style="float:left;"> Cont:</label>
+      <input type="number" class="numero" id="count" style="float:left;" tabindex="-1">
+      <div id="scrap" style="float:left; background-color:black;border: solid 2px;border-radius: 5px; border-color:white; height:25px;width:25px"> 
+        <image id="marca" src="check.svg" style="position:relative; top:2px; height:22px;"></image>
+      </div> 
+     <label style="float:left;margin-left: 10px;" id="lscrap" class="titulo2">SCRAP</label>
+    </div>
+    
+    <script src="zoom.js"></script> 
+    <script src="xlsx.full.min.js"></script> 
+    <script src="index.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- V2.6  -->
+<html lang="es-ES">
+  <head>
+    <link rel="stylesheet" type="text/css" href="estilos.css" media="screen" />
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta charset="utf-8">
+    <title>Listado Warehouse</title>
+
+    <style>
+
+   </style>
+  </head>
+  <body>
+    <input id="upload" type=file class="titulo" tabindex="-1" style="display:none">
+
+      <a href="index.html">
+        <div class="div_volver" style="position:relative;top: 15px;width: 44px; left:89%"> <image src="volver.svg" height="40px"></div>
+      </a>
+    <p><label id="titulo" class="titulo" style="color:green;">Listado de Wharehouse:</label></p>
+    
+    <p id="botones">
+        <input type="submit" id="todo" class="menu" value="TODAS">
+        <input type="submit" id="contadas" class="menu" value="Cont.">
+        <input type="submit" id="nocontadas" class="menu" value="NO Cont.">
+        <input type="submit" id="devolucion" class="menu" value="Retorno">
+        <input type="submit" id="ppk" class="menu" value="PPK">
+        <input type="submit" id="noppk" class="menu" value=" NO PPK">       
+    </p>
+    <p><textarea id="listado" readonly="true" cols="80" rows="20"></textarea></p>
+    
+    <div class="caja">
+    <p style="float: left; color:darkgray;font-weight: 200; FONT-SIZE:10px;text-align:left;;font-family:'Courier New', Courier, monospace">(CONTADAS->CANTIDAD/ASIGNADAS<-POR RECIBIR)</p>
+    <p style="float:right;  color:darkolivegreen; FONT-SIZE:10px;text-align: right;">by Paco Ortiz (FO230006@ncr.com)</p> 
+    </div>
+    
+     
+    <div class="caja" style="padding: 5px 2%;">
+        <div class="div_boton" id="txt" style="float:left;">
+              <p><image src="txt.svg" height="50px"></image></p>
+              <p><label  class="txt_boton">Listado</p>
+        </div>
+        <div style="float:right" id="xls" class="div_boton">
+          <p><image src="xls.svg" height="50px"></image></p>
+          <p><label class="txt_boton">Descargar</label></p>         
+        </div>
+        <div id="guarda" class="div_boton" style="float:right;">
+          <p><image src="upload.svg" height="50px"></image></p>
+          <p><label  class="txt_boton">Guardar</p>
+        </div>
+        <div style="float:left;display:inline;" id="auto" class="div_boton">
+          <p><image src="auto.svg" height="50px"></image></p>
+          <p><label class="txt_boton">AUTO</label></p>                
+        </div>
+      </div>
+   
+        
+    <script src="zoom.js"></script> 
+    <script src="FileSaver.min.js"></script>
+    <script src="xlsx.full.min.js"></script> 
+    <script src="listar.js"></script>
+
+</body>
+</html>
+  
+
+
